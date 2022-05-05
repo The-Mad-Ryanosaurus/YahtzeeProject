@@ -1,0 +1,166 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="YahtzeeProject.MainPage">
+
+    <StackLayout>
+
+        
+        <Frame BackgroundColor="Gold" Padding="15" CornerRadius="15" HorizontalOptions="Center" VerticalOptions="Center" WidthRequest="370">
+            <Label Text="YAHTZEE" FontSize="Large" FontAttributes="Bold" TextColor="White" HorizontalOptions="Center" VerticalOptions="Center"/>
+        </Frame>
+        
+
+        <Grid x:Name="GridGameLayout" BackgroundColor="DarkOrange" Margin="1" HeightRequest="400" WidthRequest="400" HorizontalOptions="Center" VerticalOptions="Center" ColumnSpacing="4" RowSpacing="4">
+
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <BoxView BackgroundColor="DarkGoldenrod" Grid.Row="0" Grid.Column="0" Grid.RowSpan="25" Grid.ColumnSpan="2" Margin="0, 0, 0, 7"/>
+            <BoxView BackgroundColor="DarkGoldenrod" Grid.Row="0" Grid.Column="3" Grid.RowSpan="25" Grid.ColumnSpan="2" Margin="0, 0, 0, 7"/>
+            <BoxView BackgroundColor="Red" Grid.Row="3" Grid.Column="2" Grid.RowSpan="8"/>
+            
+            <Label Text="Upper" Grid.Row="0" Grid.RowSpan="3" Grid.Column="0" HorizontalOptions="Center" VerticalOptions="Center" FontSize="Medium" FontAttributes="Bold"/>
+            <Label Text="Scores!" Grid.Row="0" Grid.RowSpan="3" Grid.Column="1" HorizontalOptions="Center" VerticalOptions="Center" FontSize="Medium" FontAttributes="Bold"/>
+           
+            <Label Text="Lower" Grid.Row="0" Grid.Column="3" Grid.RowSpan="3" HorizontalOptions="Center" VerticalOptions="Center" FontSize="Medium" FontAttributes="Bold"/>
+            <Label Text="Scores!" Grid.Row="0" Grid.Column="4" Grid.RowSpan="3" HorizontalOptions="Center" VerticalOptions="Center" FontSize="Medium" FontAttributes="Bold"/>
+
+
+            <Button x:Name="BtnOnes" StyleId="1" FontAttributes="Bold" BackgroundColor="White" TextColor="Black" Text="Ones: 1" Grid.Row="3" Grid.RowSpan="3" Grid.Column="0" HorizontalOptions="Center" VerticalOptions="Center" HeightRequest="50" WidthRequest="200" Margin="2,0,0,0" Clicked="BtnDiceScoresUpper_Clicked"/>
+            <Label x:Name="Lbl1" BackgroundColor="White" TextColor="Black" Text="" FontAttributes="Bold" Grid.Row="3" Grid.RowSpan="3" Grid.Column="1" HorizontalOptions="Center" VerticalOptions="Center" HeightRequest="50" WidthRequest="200" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Margin="0,0,3,0"/>
+
+            <Button x:Name="BtnTwos" StyleId="2" FontAttributes="Bold" BackgroundColor="White" TextColor="Black" Text="Twos: 2" Grid.Row="6" Grid.RowSpan="3" Grid.Column="0" HorizontalOptions="Center" VerticalOptions="Center" HeightRequest="50" WidthRequest="200" Margin="2,0,0,0" Clicked="BtnDiceScoresUpper_Clicked"/>
+            <Label x:Name="Lbl2" BackgroundColor="White" TextColor="Black" Text="" FontAttributes="Bold" Grid.Row="6" Grid.RowSpan="3" Grid.Column="1" HorizontalOptions="Center" VerticalOptions="Center" HeightRequest="50" WidthRequest="200" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Margin="0,0,3,0"/>
+
+            <Button x:Name="BtnThrees" StyleId="3" FontAttributes="Bold" BackgroundColor="White" TextColor="Black" Text="Threes: 3" Grid.Row="9" Grid.RowSpan="3" Grid.Column="0" HorizontalOptions="Center" VerticalOptions="Center" HeightRequest="50" WidthRequest="200" Margin="2,0,0,0" Clicked="BtnDiceScoresUpper_Clicked"/>
+            <Label x:Name="Lbl3" BackgroundColor="White" TextColor="Black" Text="" FontAttributes="Bold" Grid.Row="9" Grid.RowSpan="3" Grid.Column="1" HorizontalOptions="Center" VerticalOptions="Center" HeightRequest="50" WidthRequest="200" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Margin="0,0,3,0"/>
+
+            <Button x:Name="BtnFours" StyleId="4" FontAttributes="Bold" BackgroundColor="White" TextColor="Black" Text="Fours: 4" Grid.Row="12" Grid.RowSpan="3" Grid.Column="0" HorizontalOptions="Center" VerticalOptions="Center" HeightRequest="50" WidthRequest="200" Margin="2,0,0,0" Clicked="BtnDiceScoresUpper_Clicked"/>
+            <Label x:Name="Lbl4" BackgroundColor="White" TextColor="Black" Text="" FontAttributes="Bold" Grid.Row="12" Grid.RowSpan="3" Grid.Column="1" HorizontalOptions="Center" VerticalOptions="Center" HeightRequest="50" WidthRequest="200" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Margin="0,0,3,0"/>
+
+            <Button x:Name="BtnFives" StyleId="5" FontAttributes="Bold" BackgroundColor="White" TextColor="Black" Text="Fives: 5" Grid.Row="15" Grid.RowSpan="3" Grid.Column="0" HorizontalOptions="Center" VerticalOptions="Center" HeightRequest="50" WidthRequest="200" Margin="2,0,0,0" Clicked="BtnDiceScoresUpper_Clicked"/>
+            <Label x:Name="Lbl5" BackgroundColor="White" TextColor="Black" Text="" FontAttributes="Bold" Grid.Row="15" Grid.RowSpan="3" Grid.Column="1" HorizontalOptions="Center" VerticalOptions="Center" HeightRequest="50" WidthRequest="200" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Margin="0,0,3,0"/>
+
+            <Button x:Name="BtnSixes" StyleId="6" FontAttributes="Bold" BackgroundColor="White" TextColor="Black" Text="Sixes: 6" Grid.Row="18" Grid.RowSpan="3" Grid.Column="0" HorizontalOptions="Center" VerticalOptions="Center" HeightRequest="50" WidthRequest="200" Margin="2,0,0,0" Clicked="BtnDiceScoresUpper_Clicked"/>
+            <Label x:Name="Lbl6" BackgroundColor="White" TextColor="Black" Text="" FontAttributes="Bold" Grid.Row="18" Grid.RowSpan="3" Grid.Column="1" HorizontalOptions="Center" VerticalOptions="Center" HeightRequest="50" WidthRequest="200" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Margin="0,0,3,0"/>
+
+            <Label x:Name="LblTextUpperBonus" Text="Bonus!" FontAttributes="Bold" BackgroundColor="Transparent" TextColor="Black" Grid.Row="21" Grid.RowSpan="3" Grid.Column="0" HorizontalOptions="Center" VerticalOptions="Center" HeightRequest="50" WidthRequest="200" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Margin="2,0,0,0"/>
+            <Label x:Name="LblUpperBonus" Text="" FontAttributes="Bold" BackgroundColor="Transparent" TextColor="Black" Grid.Row="21" Grid.RowSpan="3" Grid.Column="1" HorizontalOptions="Center" VerticalOptions="Center" HeightRequest="50" WidthRequest="200" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Margin="0,0,3,0"/>
+
+            <Button x:Name="BtnThreeKind" StyleId="3oK" FontAttributes="Bold" BackgroundColor="White" TextColor="Black" Text="3 Kinds " Grid.Row="3" Grid.RowSpan="3" Grid.Column="4" HorizontalOptions="Center" VerticalOptions="Center" HeightRequest="50" WidthRequest="200" Margin="0,0,2,0" Clicked="BtnThreeKind_Clicked"/>
+            <Label x:Name="Lbl3oK" BackgroundColor="White" TextColor="Black" Text="" FontAttributes="Bold" Grid.Row="3" Grid.RowSpan="3" Grid.Column="3" HorizontalOptions="Center" VerticalOptions="Center" HeightRequest="50" WidthRequest="200" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Margin="3,0,0,0"/>
+
+            <Button x:Name="BtnFourKind" StyleId="4oK" FontAttributes="Bold" BackgroundColor="White" TextColor="Black" Text="4 Kinds " Grid.Row="6" Grid.RowSpan="3" Grid.Column="4" HorizontalOptions="Center" VerticalOptions="Center" HeightRequest="50" WidthRequest="200" Margin="0,0,2,0" Clicked="BtnFourKind_Clicked"/>
+            <Label x:Name="Lbl4oK" BackgroundColor="White" TextColor="Black" Text="" FontAttributes="Bold" Grid.Row="6" Grid.RowSpan="3" Grid.Column="3" HorizontalOptions="Center" VerticalOptions="Center" HeightRequest="50" WidthRequest="200" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Margin="3,0,0,0"/>
+
+            <Button x:Name="BtnYahtzee" StyleId="Yahtzee" FontAttributes="Bold" BackgroundColor="White" TextColor="Black" Text="Yahtzee" Grid.Row="9" Grid.RowSpan="3" Grid.Column="4" HorizontalOptions="Center" VerticalOptions="Center" HeightRequest="50" WidthRequest="200" Margin="0,0,2,0" Clicked="BtnYahtzee_Clicked"/>
+            <Label x:Name="LblYahtzee" BackgroundColor="White" TextColor="Black" Text="" FontAttributes="Bold" Grid.Row="9" Grid.RowSpan="3" Grid.Column="3" HorizontalOptions="Center" VerticalOptions="Center" HeightRequest="50" WidthRequest="200" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Margin="3,0,0,0"/>
+
+            <Button x:Name="BtnFourRow" StyleId="4Row" FontAttributes="Bold" BackgroundColor="White" TextColor="Black" Text="S.Str" Grid.Row="12" Grid.RowSpan="3" Grid.Column="4" HorizontalOptions="Center" VerticalOptions="Center" HeightRequest="50" WidthRequest="200" Margin="0,0,2,0" Clicked="BtnFourRow_Clicked"/>
+            <Label x:Name="Lbl4Row" BackgroundColor="White" TextColor="Black" Text="" FontAttributes="Bold" Grid.Row="12" Grid.RowSpan="3" Grid.Column="3" HorizontalOptions="Center" VerticalOptions="Center" HeightRequest="50" WidthRequest="200" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Margin="3,0,0,0"/>
+
+            <Button x:Name="BtnFiveRow" StyleId="5Row" FontAttributes="Bold" BackgroundColor="White" TextColor="Black" Text="L.Str" Grid.Row="15" Grid.RowSpan="3" Grid.Column="4" HorizontalOptions="Center" VerticalOptions="Center" HeightRequest="50" WidthRequest="200" Margin="0,0,2,0" Clicked="BtnFiveRow_Clicked"/>
+            <Label x:Name="Lbl5Row" BackgroundColor="White" TextColor="Black" Text="" FontAttributes="Bold" Grid.Row="15" Grid.RowSpan="3" Grid.Column="3" HorizontalOptions="Center" VerticalOptions="Center" HeightRequest="50" WidthRequest="200" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Margin="3,0,0,0"/>
+
+            <Button x:Name="BtnChance" StyleId="Chance" FontAttributes="Bold" BackgroundColor="White" TextColor="Black" Text="Chance" Grid.Row="18" Grid.RowSpan="3" Grid.Column="4" HorizontalOptions="Center" VerticalOptions="Center" HeightRequest="50" WidthRequest="200" Margin="0,0,2,0" Clicked="BtnChance_Clicked"/>
+            <Label x:Name="LblChance" BackgroundColor="White" TextColor="Black" Text="" FontAttributes="Bold" Grid.Row="18" Grid.RowSpan="3" Grid.Column="3" HorizontalOptions="Center" VerticalOptions="Center" HeightRequest="50" WidthRequest="200" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Margin="3,0,0,0"/>
+
+            <Button x:Name="BtnFullHouse" StyleId="FullHouse" FontAttributes="Bold" BackgroundColor="White" TextColor="Black" Text="F.House" Grid.Row="21" Grid.RowSpan="3" Grid.Column="4" HorizontalOptions="Center" VerticalOptions="Center" HeightRequest="50" WidthRequest="200" Margin="0,0,2,0" Clicked="BtnFullHouse_Clicked"/>
+            <Label x:Name="LblFullHouse" BackgroundColor="White" TextColor="Black" Text="" FontAttributes="Bold" Grid.Row="21" Grid.RowSpan="3" Grid.Column="3" HorizontalOptions="Center" VerticalOptions="Center" HeightRequest="50" WidthRequest="200" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Margin="3,0,0,0"/>
+
+
+            <Button x:Name="BtnDice1" BackgroundColor="White" TextColor="Black" CornerRadius="10" BorderColor="Black" BorderWidth="3" Text="" StyleId="Roll" FontSize ="Large" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" HeightRequest="100" WidthRequest="100" Grid.RowSpan="6" Margin="5,2,5,5" Grid.Row="26" Grid.Column="0" Clicked="BtnDiceChosen_Clicked"/>
+            <Button x:Name="BtnDice2" BackgroundColor="White" TextColor="Black" CornerRadius="10" BorderColor="Black" BorderWidth="3" Text="" StyleId="Roll" FontSize ="Large" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" HeightRequest="100" WidthRequest="100" Grid.RowSpan="6" Margin="5,2,5,5" Grid.Row="26" Grid.Column="1" Clicked="BtnDiceChosen_Clicked"/>
+            <Button x:Name="BtnDice3" BackgroundColor="White" TextColor="Black" CornerRadius="10" BorderColor="Black" BorderWidth="3" Text="" StyleId="Roll" FontSize ="Large" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" HeightRequest="100" WidthRequest="100" Grid.RowSpan="6" Margin="5,2,5,5" Grid.Row="26" Grid.Column="2" Clicked="BtnDiceChosen_Clicked"/>
+            <Button x:Name="BtnDice4" BackgroundColor="White" TextColor="Black" CornerRadius="10" BorderColor="Black" BorderWidth="3" Text="" StyleId="Roll" FontSize ="Large" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" HeightRequest="100" WidthRequest="100" Grid.RowSpan="6" Margin="5,2,5,5" Grid.Row="26" Grid.Column="3" Clicked="BtnDiceChosen_Clicked"/>
+            <Button x:Name="BtnDice5" BackgroundColor="White" TextColor="Black" CornerRadius="10" BorderColor="Black" BorderWidth="3" Text="" StyleId="Roll" FontSize ="Large" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" HeightRequest="100" WidthRequest="100" Grid.RowSpan="6" Margin="5,2,5,5" Grid.Row="26" Grid.Column="4" Clicked="BtnDiceChosen_Clicked"/>
+
+          
+            
+            <Button x:Name="BtnDiceRoll" BackgroundColor="Green" Text="Roll Dice" FontAttributes="Bold" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" Grid.Row="32" Grid.Column="2" Grid.RowSpan="4" Grid.ColumnSpan="1" HeightRequest="50" WidthRequest="200" Margin="0,0,0,5" CornerRadius="10" BorderColor="Black" BorderWidth="2"  Clicked="BtnDiceRoll_Clicked"/>
+            <Button x:Name="ResetBoard" BackgroundColor="Black" TextColor="Red" Text="Reset" StyleId="Reset" FontAttributes="Bold" VerticalOptions="Center" HorizontalOptions="Center" Grid.Row="32" Grid.Column="0" Grid.RowSpan="4" Grid.ColumnSpan="1" HeightRequest="50" WidthRequest="200" Margin="7,0,7,5" CornerRadius="10" BorderColor="Black" BorderWidth="2" Clicked="ResetBoard_Clicked"/>
+
+            <Label x:Name="LblTextScoretoBeat" Text="Score to Beat" FontAttributes="Bold"  BackgroundColor="Transparent" TextColor="Black" Grid.Row="3" Grid.RowSpan="3" Grid.Column="2" HorizontalOptions="Center" VerticalOptions="Center" HeightRequest="50" WidthRequest="200" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Margin="3,0,3,0"/>
+            <Label x:Name="LblScoretoBeat" Text="" FontAttributes="Bold" BackgroundColor="White" TextColor="Black" Grid.Row="7" Grid.RowSpan="3" Grid.Column="2" HorizontalOptions="Center" VerticalOptions="Center" HeightRequest="50" WidthRequest="200" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Margin="3,0,3,0"/>
+            
+            <Label x:Name="LblTextUpTotal" Text="Up Total:" FontAttributes="Bold"  BackgroundColor="Transparent" TextColor="Black" Grid.Row="24" Grid.RowSpan="3" Grid.Column="0" HorizontalOptions="End" VerticalOptions="End" HeightRequest="50" WidthRequest="200" HorizontalTextAlignment="End" VerticalTextAlignment="Center" Margin="3,0,3,0"/>
+            <Label x:Name="LblUpTotal" Text="" FontAttributes="Bold" BackgroundColor="Transparent" TextColor="Black" Grid.Row="24" Grid.RowSpan="3" Grid.Column="1" HorizontalOptions="Center" VerticalOptions="Center" HeightRequest="50" WidthRequest="200" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Margin="3,0,3,0"/>
+
+            <Label x:Name="LblTextLowTotal" Text="Low Total:" FontAttributes="Bold"  BackgroundColor="Transparent" TextColor="Black" Grid.Row="24" Grid.RowSpan="3" Grid.Column="3" HorizontalOptions="End" VerticalOptions="End" HeightRequest="50" WidthRequest="200" HorizontalTextAlignment="End" VerticalTextAlignment="Center" Margin="3,0,3,0"/>
+            <Label x:Name="LblLowTotal" Text="" FontAttributes="Bold" BackgroundColor="Transparent" TextColor="Black" Grid.Row="24" Grid.RowSpan="3" Grid.Column="4" HorizontalOptions="Start" VerticalOptions="Start" HeightRequest="50" WidthRequest="200" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Margin="3,0,3,0"/>
+
+
+
+        </Grid>
+
+        <Grid x:Name="GridGameRest" BackgroundColor="Purple" Margin="1" HeightRequest="60" WidthRequest="400" HorizontalOptions="Center" VerticalOptions="Center" ColumnSpacing="4" RowSpacing="4">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            
+           
+            <Label x:Name="LblRollNumber" Text="Start the Game by Rolling the Dice!" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" HorizontalOptions="Center" VerticalOptions="Center" Margin="2,0,0,0" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" FontAttributes="Bold" FontSize="Medium"/>
+            </Grid>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Margin="10">
+
+
+
+            
+
+           
+
+
+
+
+        </StackLayout>
+    </StackLayout>
+</ContentPage>
